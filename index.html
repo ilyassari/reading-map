@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading Map</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin="" />
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>📚 My Reading Map</h1>
+                <button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle dark mode">🌙</button>
+            </div>
+            <p class="subtitle">Books I've read from around the world</p>
+        </header>
+        
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-value" id="total-books">0</span>
+                <span class="stat-label">Books</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="total-countries">0</span>
+                <span class="stat-label">Countries</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="total-authors">0</span>
+                <span class="stat-label">Authors</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="year-range">-</span>
+                <span class="stat-label">Years</span>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="🔍 Search books or authors... (Press / to focus)" />
+            <button id="clear-search" class="clear-btn" style="display: none;">✕</button>
+        </div>
+        
+        <!-- Main Layout: Filters + Map -->
+        <div class="main-layout">
+            <!-- Left Sidebar: Year Filters -->
+            <aside class="sidebar-left">
+                <div class="sidebar-header">
+                    <h3>📅 Years</h3>
+                    <button id="clear-years" class="clear-icon" title="Clear all years">❌</button>
+                </div>
+                <div id="year-filters" class="filter-list"></div>
+            </aside>
+            
+            <!-- Map -->
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+            
+            <!-- Right Sidebar: Author Filters -->
+            <aside class="sidebar-right">
+                <div class="sidebar-header">
+                    <h3>✍️ Authors</h3>
+                    <button id="clear-authors" class="clear-icon" title="Clear all authors">❌</button>
+                </div>
+                <div id="author-filters" class="filter-list"></div>
+            </aside>
+        </div>
+        
+        <!-- Book List -->
+        <div id="book-list" class="book-list"></div>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    
+    <!-- Configuration (load first!) -->
+    <script src="config.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

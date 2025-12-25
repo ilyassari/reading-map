@@ -1,0 +1,1360 @@
+{
+    "Afghanistan": {
+      "coordinates": [
+        33.9391,
+        67.71
+      ],
+      "flag": "https://flagcdn.com/w320/af.png"
+    },
+    "Albania": {
+      "coordinates": [
+        41.1533,
+        20.1683
+      ],
+      "flag": "https://flagcdn.com/w320/al.png"
+    },
+    "Algeria": {
+      "coordinates": [
+        28.0339,
+        1.6596
+      ],
+      "flag": "https://flagcdn.com/w320/dz.png"
+    },
+    "Andorra": {
+      "coordinates": [
+        42.5063,
+        1.5218
+      ],
+      "flag": "https://flagcdn.com/w320/ad.png"
+    },
+    "Angola": {
+      "coordinates": [
+        -11.2027,
+        17.8739
+      ],
+      "flag": "https://flagcdn.com/w320/ao.png"
+    },
+    "Argentina": {
+      "coordinates": [
+        -38.4161,
+        -63.6167
+      ],
+      "flag": "https://flagcdn.com/w320/ar.png"
+    },
+    "Armenia": {
+      "coordinates": [
+        40.0691,
+        45.0382
+      ],
+      "flag": "https://flagcdn.com/w320/am.png"
+    },
+    "Australia": {
+      "coordinates": [
+        -25.2744,
+        133.7751
+      ],
+      "flag": "https://flagcdn.com/w320/au.png"
+    },
+    "Austria": {
+      "coordinates": [
+        47.5162,
+        14.5501
+      ],
+      "flag": "https://flagcdn.com/w320/at.png"
+    },
+    "Azerbaijan": {
+      "coordinates": [
+        40.1431,
+        47.5769
+      ],
+      "flag": "https://flagcdn.com/w320/az.png"
+    },
+    "Bahamas": {
+      "coordinates": [
+        25.0343,
+        -77.3963
+      ],
+      "flag": "https://flagcdn.com/w320/bs.png"
+    },
+    "Bahrain": {
+      "coordinates": [
+        26.0667,
+        50.5577
+      ],
+      "flag": "https://flagcdn.com/w320/bh.png"
+    },
+    "Bangladesh": {
+      "coordinates": [
+        23.685,
+        90.3563
+      ],
+      "flag": "https://flagcdn.com/w320/bd.png"
+    },
+    "Barbados": {
+      "coordinates": [
+        13.1939,
+        -59.5432
+      ],
+      "flag": "https://flagcdn.com/w320/bb.png"
+    },
+    "Belarus": {
+      "coordinates": [
+        53.7098,
+        27.9534
+      ],
+      "flag": "https://flagcdn.com/w320/by.png"
+    },
+    "Belgium": {
+      "coordinates": [
+        50.5039,
+        4.4699
+      ],
+      "flag": "https://flagcdn.com/w320/be.png"
+    },
+    "Belize": {
+      "coordinates": [
+        17.1899,
+        -88.4976
+      ],
+      "flag": "https://flagcdn.com/w320/bz.png"
+    },
+    "Benin": {
+      "coordinates": [
+        9.3077,
+        2.3158
+      ],
+      "flag": "https://flagcdn.com/w320/bj.png"
+    },
+    "Bhutan": {
+      "coordinates": [
+        27.5142,
+        90.4336
+      ],
+      "flag": "https://flagcdn.com/w320/bt.png"
+    },
+    "Bolivia": {
+      "coordinates": [
+        -16.2902,
+        -63.5887
+      ],
+      "flag": "https://flagcdn.com/w320/bo.png"
+    },
+    "Bosnia and Herzegovina": {
+      "coordinates": [
+        43.9159,
+        17.6791
+      ],
+      "flag": "https://flagcdn.com/w320/ba.png"
+    },
+    "Botswana": {
+      "coordinates": [
+        -22.3285,
+        24.6849
+      ],
+      "flag": "https://flagcdn.com/w320/bw.png"
+    },
+    "Brazil": {
+      "coordinates": [
+        -14.235,
+        -51.9253
+      ],
+      "flag": "https://flagcdn.com/w320/br.png"
+    },
+    "Brunei": {
+      "coordinates": [
+        4.5353,
+        114.7277
+      ],
+      "flag": "https://flagcdn.com/w320/bn.png"
+    },
+    "Bulgaria": {
+      "coordinates": [
+        42.7339,
+        25.4858
+      ],
+      "flag": "https://flagcdn.com/w320/bg.png"
+    },
+    "Burkina Faso": {
+      "coordinates": [
+        12.2383,
+        -1.5616
+      ],
+      "flag": "https://flagcdn.com/w320/bf.png"
+    },
+    "Burundi": {
+      "coordinates": [
+        -3.3731,
+        29.9189
+      ],
+      "flag": "https://flagcdn.com/w320/bi.png"
+    },
+    "Cambodia": {
+      "coordinates": [
+        12.5657,
+        104.991
+      ],
+      "flag": "https://flagcdn.com/w320/kh.png"
+    },
+    "Cameroon": {
+      "coordinates": [
+        7.3697,
+        12.3547
+      ],
+      "flag": "https://flagcdn.com/w320/cm.png"
+    },
+    "Canada": {
+      "coordinates": [
+        56.1304,
+        -106.3468
+      ],
+      "flag": "https://flagcdn.com/w320/ca.png"
+    },
+    "Cape Verde": {
+      "coordinates": [
+        16.5388,
+        -23.0418
+      ],
+      "flag": "https://flagcdn.com/w320/cv.png"
+    },
+    "Central African Republic": {
+      "coordinates": [
+        6.6111,
+        20.9394
+      ],
+      "flag": "https://flagcdn.com/w320/cf.png"
+    },
+    "Chad": {
+      "coordinates": [
+        15.4542,
+        18.7322
+      ],
+      "flag": "https://flagcdn.com/w320/td.png"
+    },
+    "Chile": {
+      "coordinates": [
+        -35.6751,
+        -71.543
+      ],
+      "flag": "https://flagcdn.com/w320/cl.png"
+    },
+    "China": {
+      "coordinates": [
+        35.8617,
+        104.1954
+      ],
+      "flag": "https://flagcdn.com/w320/cn.png"
+    },
+    "Colombia": {
+      "coordinates": [
+        4.5709,
+        -74.2973
+      ],
+      "flag": "https://flagcdn.com/w320/co.png"
+    },
+    "Comoros": {
+      "coordinates": [
+        -11.6455,
+        43.3333
+      ],
+      "flag": "https://flagcdn.com/w320/km.png"
+    },
+    "Congo": {
+      "coordinates": [
+        -4.0383,
+        21.7587
+      ],
+      "flag": "https://flagcdn.com/w320/cg.png"
+    },
+    "Costa Rica": {
+      "coordinates": [
+        9.7489,
+        -83.7534
+      ],
+      "flag": "https://flagcdn.com/w320/cr.png"
+    },
+    "Croatia": {
+      "coordinates": [
+        45.1,
+        15.2
+      ],
+      "flag": "https://flagcdn.com/w320/hr.png"
+    },
+    "Cuba": {
+      "coordinates": [
+        21.5218,
+        -77.7812
+      ],
+      "flag": "https://flagcdn.com/w320/cu.png"
+    },
+    "Czech Republic": {
+      "coordinates": [
+        49.8175,
+        15.473
+      ],
+      "flag": "https://flagcdn.com/w320/cz.png"
+    },
+    "Denmark": {
+      "coordinates": [
+        56.2639,
+        9.5018
+      ],
+      "flag": "https://flagcdn.com/w320/dk.png"
+    },
+    "Djibouti": {
+      "coordinates": [
+        11.8251,
+        42.5903
+      ],
+      "flag": "https://flagcdn.com/w320/dj.png"
+    },
+    "Dominica": {
+      "coordinates": [
+        15.415,
+        -61.371
+      ],
+      "flag": "https://flagcdn.com/w320/dm.png"
+    },
+    "Dominican Republic": {
+      "coordinates": [
+        18.7357,
+        -70.1627
+      ],
+      "flag": "https://flagcdn.com/w320/do.png"
+    },
+    "Ecuador": {
+      "coordinates": [
+        -1.8312,
+        -78.1834
+      ],
+      "flag": "https://flagcdn.com/w320/ec.png"
+    },
+    "Egypt": {
+      "coordinates": [
+        26.8206,
+        30.8025
+      ],
+      "flag": "https://flagcdn.com/w320/eg.png"
+    },
+    "El Salvador": {
+      "coordinates": [
+        13.7942,
+        -88.8965
+      ],
+      "flag": "https://flagcdn.com/w320/sv.png"
+    },
+    "Equatorial Guinea": {
+      "coordinates": [
+        1.6508,
+        10.2679
+      ],
+      "flag": "https://flagcdn.com/w320/gq.png"
+    },
+    "Eritrea": {
+      "coordinates": [
+        15.1794,
+        39.7823
+      ],
+      "flag": "https://flagcdn.com/w320/er.png"
+    },
+    "Estonia": {
+      "coordinates": [
+        58.5953,
+        25.0136
+      ],
+      "flag": "https://flagcdn.com/w320/ee.png"
+    },
+    "Eswatini": {
+      "coordinates": [
+        -26.5225,
+        31.4659
+      ],
+      "flag": "https://flagcdn.com/w320/sz.png"
+    },
+    "Ethiopia": {
+      "coordinates": [
+        9.145,
+        40.4897
+      ],
+      "flag": "https://flagcdn.com/w320/et.png"
+    },
+    "Fiji": {
+      "coordinates": [
+        -17.7134,
+        178.065
+      ],
+      "flag": "https://flagcdn.com/w320/fj.png"
+    },
+    "Finland": {
+      "coordinates": [
+        61.9241,
+        25.7482
+      ],
+      "flag": "https://flagcdn.com/w320/fi.png"
+    },
+    "France": {
+      "coordinates": [
+        46.2276,
+        2.2137
+      ],
+      "flag": "https://flagcdn.com/w320/fr.png"
+    },
+    "Gabon": {
+      "coordinates": [
+        -0.8037,
+        11.6094
+      ],
+      "flag": "https://flagcdn.com/w320/ga.png"
+    },
+    "Gambia": {
+      "coordinates": [
+        13.4432,
+        -15.3101
+      ],
+      "flag": "https://flagcdn.com/w320/gm.png"
+    },
+    "Georgia": {
+      "coordinates": [
+        42.3154,
+        43.3569
+      ],
+      "flag": "https://flagcdn.com/w320/ge.png"
+    },
+    "Germany": {
+      "coordinates": [
+        51.1657,
+        10.4515
+      ],
+      "flag": "https://flagcdn.com/w320/de.png"
+    },
+    "Ghana": {
+      "coordinates": [
+        7.9465,
+        -1.0232
+      ],
+      "flag": "https://flagcdn.com/w320/gh.png"
+    },
+    "Greece": {
+      "coordinates": [
+        39.0742,
+        21.8243
+      ],
+      "flag": "https://flagcdn.com/w320/gr.png"
+    },
+    "Grenada": {
+      "coordinates": [
+        12.1165,
+        -61.679
+      ],
+      "flag": "https://flagcdn.com/w320/gd.png"
+    },
+    "Guatemala": {
+      "coordinates": [
+        15.7835,
+        -90.2308
+      ],
+      "flag": "https://flagcdn.com/w320/gt.png"
+    },
+    "Guinea": {
+      "coordinates": [
+        9.9456,
+        -9.6966
+      ],
+      "flag": "https://flagcdn.com/w320/gn.png"
+    },
+    "Guinea-Bissau": {
+      "coordinates": [
+        11.8037,
+        -15.1804
+      ],
+      "flag": "https://flagcdn.com/w320/gw.png"
+    },
+    "Guyana": {
+      "coordinates": [
+        4.8604,
+        -58.9302
+      ],
+      "flag": "https://flagcdn.com/w320/gy.png"
+    },
+    "Haiti": {
+      "coordinates": [
+        18.9712,
+        -72.2852
+      ],
+      "flag": "https://flagcdn.com/w320/ht.png"
+    },
+    "Honduras": {
+      "coordinates": [
+        15.2,
+        -86.2419
+      ],
+      "flag": "https://flagcdn.com/w320/hn.png"
+    },
+    "Hungary": {
+      "coordinates": [
+        47.1625,
+        19.5033
+      ],
+      "flag": "https://flagcdn.com/w320/hu.png"
+    },
+    "Iceland": {
+      "coordinates": [
+        64.9631,
+        -19.0208
+      ],
+      "flag": "https://flagcdn.com/w320/is.png"
+    },
+    "India": {
+      "coordinates": [
+        20.5937,
+        78.9629
+      ],
+      "flag": "https://flagcdn.com/w320/in.png"
+    },
+    "Indonesia": {
+      "coordinates": [
+        -0.7893,
+        113.9213
+      ],
+      "flag": "https://flagcdn.com/w320/id.png"
+    },
+    "Iran": {
+      "coordinates": [
+        32.4279,
+        53.688
+      ],
+      "flag": "https://flagcdn.com/w320/ir.png"
+    },
+    "Iraq": {
+      "coordinates": [
+        33.2232,
+        43.6793
+      ],
+      "flag": "https://flagcdn.com/w320/iq.png"
+    },
+    "Ireland": {
+      "coordinates": [
+        53.4129,
+        -8.2439
+      ],
+      "flag": "https://flagcdn.com/w320/ie.png"
+    },
+    "Israel": {
+      "coordinates": [
+        31.0461,
+        34.8516
+      ],
+      "flag": "https://flagcdn.com/w320/il.png"
+    },
+    "Italy": {
+      "coordinates": [
+        41.8719,
+        12.5674
+      ],
+      "flag": "https://flagcdn.com/w320/it.png"
+    },
+    "Jamaica": {
+      "coordinates": [
+        18.1096,
+        -77.2975
+      ],
+      "flag": "https://flagcdn.com/w320/jm.png"
+    },
+    "Japan": {
+      "coordinates": [
+        36.2048,
+        138.2529
+      ],
+      "flag": "https://flagcdn.com/w320/jp.png"
+    },
+    "Jordan": {
+      "coordinates": [
+        30.5852,
+        36.2384
+      ],
+      "flag": "https://flagcdn.com/w320/jo.png"
+    },
+    "Kazakhstan": {
+      "coordinates": [
+        48.0196,
+        66.9237
+      ],
+      "flag": "https://flagcdn.com/w320/kz.png"
+    },
+    "Kenya": {
+      "coordinates": [
+        -0.0236,
+        37.9062
+      ],
+      "flag": "https://flagcdn.com/w320/ke.png"
+    },
+    "Kiribati": {
+      "coordinates": [
+        -3.3704,
+        -168.734
+      ],
+      "flag": "https://flagcdn.com/w320/ki.png"
+    },
+    "Kuwait": {
+      "coordinates": [
+        29.3117,
+        47.4818
+      ],
+      "flag": "https://flagcdn.com/w320/kw.png"
+    },
+    "Kyrgyzstan": {
+      "coordinates": [
+        41.2044,
+        74.7661
+      ],
+      "flag": "https://flagcdn.com/w320/kg.png"
+    },
+    "Laos": {
+      "coordinates": [
+        19.8563,
+        102.4955
+      ],
+      "flag": "https://flagcdn.com/w320/la.png"
+    },
+    "Latvia": {
+      "coordinates": [
+        56.8796,
+        24.6032
+      ],
+      "flag": "https://flagcdn.com/w320/lv.png"
+    },
+    "Lebanon": {
+      "coordinates": [
+        33.8547,
+        35.8623
+      ],
+      "flag": "https://flagcdn.com/w320/lb.png"
+    },
+    "Lesotho": {
+      "coordinates": [
+        -29.61,
+        28.2336
+      ],
+      "flag": "https://flagcdn.com/w320/ls.png"
+    },
+    "Liberia": {
+      "coordinates": [
+        6.4281,
+        -9.4295
+      ],
+      "flag": "https://flagcdn.com/w320/lr.png"
+    },
+    "Libya": {
+      "coordinates": [
+        26.3351,
+        17.2283
+      ],
+      "flag": "https://flagcdn.com/w320/ly.png"
+    },
+    "Liechtenstein": {
+      "coordinates": [
+        47.166,
+        9.5554
+      ],
+      "flag": "https://flagcdn.com/w320/li.png"
+    },
+    "Lithuania": {
+      "coordinates": [
+        55.1694,
+        23.8813
+      ],
+      "flag": "https://flagcdn.com/w320/lt.png"
+    },
+    "Luxembourg": {
+      "coordinates": [
+        49.8153,
+        6.1296
+      ],
+      "flag": "https://flagcdn.com/w320/lu.png"
+    },
+    "Madagascar": {
+      "coordinates": [
+        -18.7669,
+        46.8691
+      ],
+      "flag": "https://flagcdn.com/w320/mg.png"
+    },
+    "Malawi": {
+      "coordinates": [
+        -13.2543,
+        34.3015
+      ],
+      "flag": "https://flagcdn.com/w320/mw.png"
+    },
+    "Malaysia": {
+      "coordinates": [
+        4.2105,
+        101.9758
+      ],
+      "flag": "https://flagcdn.com/w320/my.png"
+    },
+    "Maldives": {
+      "coordinates": [
+        3.2028,
+        73.2207
+      ],
+      "flag": "https://flagcdn.com/w320/mv.png"
+    },
+    "Mali": {
+      "coordinates": [
+        17.5707,
+        -3.9962
+      ],
+      "flag": "https://flagcdn.com/w320/ml.png"
+    },
+    "Malta": {
+      "coordinates": [
+        35.9375,
+        14.3754
+      ],
+      "flag": "https://flagcdn.com/w320/mt.png"
+    },
+    "Marshall Islands": {
+      "coordinates": [
+        7.1315,
+        171.1845
+      ],
+      "flag": "https://flagcdn.com/w320/mh.png"
+    },
+    "Mauritania": {
+      "coordinates": [
+        21.0079,
+        -10.9408
+      ],
+      "flag": "https://flagcdn.com/w320/mr.png"
+    },
+    "Mauritius": {
+      "coordinates": [
+        -20.3484,
+        57.5522
+      ],
+      "flag": "https://flagcdn.com/w320/mu.png"
+    },
+    "Mexico": {
+      "coordinates": [
+        23.6345,
+        -102.5528
+      ],
+      "flag": "https://flagcdn.com/w320/mx.png"
+    },
+    "Micronesia": {
+      "coordinates": [
+        7.4256,
+        150.5508
+      ],
+      "flag": "https://flagcdn.com/w320/fm.png"
+    },
+    "Moldova": {
+      "coordinates": [
+        47.4116,
+        28.3699
+      ],
+      "flag": "https://flagcdn.com/w320/md.png"
+    },
+    "Monaco": {
+      "coordinates": [
+        43.7384,
+        7.4246
+      ],
+      "flag": "https://flagcdn.com/w320/mc.png"
+    },
+    "Mongolia": {
+      "coordinates": [
+        46.8625,
+        103.8467
+      ],
+      "flag": "https://flagcdn.com/w320/mn.png"
+    },
+    "Montenegro": {
+      "coordinates": [
+        42.7087,
+        19.3744
+      ],
+      "flag": "https://flagcdn.com/w320/me.png"
+    },
+    "Morocco": {
+      "coordinates": [
+        31.7917,
+        -7.0926
+      ],
+      "flag": "https://flagcdn.com/w320/ma.png"
+    },
+    "Mozambique": {
+      "coordinates": [
+        -18.6657,
+        35.5296
+      ],
+      "flag": "https://flagcdn.com/w320/mz.png"
+    },
+    "Myanmar": {
+      "coordinates": [
+        21.9162,
+        95.956
+      ],
+      "flag": "https://flagcdn.com/w320/mm.png"
+    },
+    "Namibia": {
+      "coordinates": [
+        -22.9576,
+        18.4904
+      ],
+      "flag": "https://flagcdn.com/w320/na.png"
+    },
+    "Nauru": {
+      "coordinates": [
+        -0.5228,
+        166.9315
+      ],
+      "flag": "https://flagcdn.com/w320/nr.png"
+    },
+    "Nepal": {
+      "coordinates": [
+        28.3949,
+        84.124
+      ],
+      "flag": "https://flagcdn.com/w320/np.png"
+    },
+    "Netherlands": {
+      "coordinates": [
+        52.1326,
+        5.2913
+      ],
+      "flag": "https://flagcdn.com/w320/nl.png"
+    },
+    "New Zealand": {
+      "coordinates": [
+        -40.9006,
+        174.886
+      ],
+      "flag": "https://flagcdn.com/w320/nz.png"
+    },
+    "Nicaragua": {
+      "coordinates": [
+        12.8654,
+        -85.2072
+      ],
+      "flag": "https://flagcdn.com/w320/ni.png"
+    },
+    "Niger": {
+      "coordinates": [
+        17.6078,
+        8.0817
+      ],
+      "flag": "https://flagcdn.com/w320/ne.png"
+    },
+    "Nigeria": {
+      "coordinates": [
+        9.082,
+        8.6753
+      ],
+      "flag": "https://flagcdn.com/w320/ng.png"
+    },
+    "North Korea": {
+      "coordinates": [
+        40.3399,
+        127.5101
+      ],
+      "flag": "https://flagcdn.com/w320/kp.png"
+    },
+    "North Macedonia": {
+      "coordinates": [
+        41.6086,
+        21.7453
+      ],
+      "flag": "https://flagcdn.com/w320/mk.png"
+    },
+    "Northern Cyprus": {
+      "coordinates": [
+        35.1856,
+        33.3823
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg/320px-Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg.png"
+    },
+    "Norway": {
+      "coordinates": [
+        60.472,
+        8.4689
+      ],
+      "flag": "https://flagcdn.com/w320/no.png"
+    },
+    "Oman": {
+      "coordinates": [
+        21.4735,
+        55.9754
+      ],
+      "flag": "https://flagcdn.com/w320/om.png"
+    },
+    "Pakistan": {
+      "coordinates": [
+        30.3753,
+        69.3451
+      ],
+      "flag": "https://flagcdn.com/w320/pk.png"
+    },
+    "Palau": {
+      "coordinates": [
+        7.515,
+        134.5825
+      ],
+      "flag": "https://flagcdn.com/w320/pw.png"
+    },
+    "Palestine": {
+      "coordinates": [
+        31.9522,
+        35.2332
+      ],
+      "flag": "https://flagcdn.com/w320/ps.png"
+    },
+    "Panama": {
+      "coordinates": [
+        8.538,
+        -80.7821
+      ],
+      "flag": "https://flagcdn.com/w320/pa.png"
+    },
+    "Papua New Guinea": {
+      "coordinates": [
+        -6.315,
+        143.9555
+      ],
+      "flag": "https://flagcdn.com/w320/pg.png"
+    },
+    "Paraguay": {
+      "coordinates": [
+        -23.4425,
+        -58.4438
+      ],
+      "flag": "https://flagcdn.com/w320/py.png"
+    },
+    "Peru": {
+      "coordinates": [
+        -9.19,
+        -75.0152
+      ],
+      "flag": "https://flagcdn.com/w320/pe.png"
+    },
+    "Philippines": {
+      "coordinates": [
+        12.8797,
+        121.774
+      ],
+      "flag": "https://flagcdn.com/w320/ph.png"
+    },
+    "Poland": {
+      "coordinates": [
+        51.9194,
+        19.1451
+      ],
+      "flag": "https://flagcdn.com/w320/pl.png"
+    },
+    "Portugal": {
+      "coordinates": [
+        39.3999,
+        -8.2245
+      ],
+      "flag": "https://flagcdn.com/w320/pt.png"
+    },
+    "Qatar": {
+      "coordinates": [
+        25.3548,
+        51.1839
+      ],
+      "flag": "https://flagcdn.com/w320/qa.png"
+    },
+    "Romania": {
+      "coordinates": [
+        45.9432,
+        24.9668
+      ],
+      "flag": "https://flagcdn.com/w320/ro.png"
+    },
+    "Russia": {
+      "coordinates": [
+        61.524,
+        105.3188
+      ],
+      "flag": "https://flagcdn.com/w320/ru.png"
+    },
+    "Rwanda": {
+      "coordinates": [
+        -1.9403,
+        29.8739
+      ],
+      "flag": "https://flagcdn.com/w320/rw.png"
+    },
+    "Saint Kitts and Nevis": {
+      "coordinates": [
+        17.3578,
+        -62.783
+      ],
+      "flag": "https://flagcdn.com/w320/kn.png"
+    },
+    "Saint Lucia": {
+      "coordinates": [
+        13.9094,
+        -60.9789
+      ],
+      "flag": "https://flagcdn.com/w320/lc.png"
+    },
+    "Saint Vincent and the Grenadines": {
+      "coordinates": [
+        12.9843,
+        -61.2872
+      ],
+      "flag": "https://flagcdn.com/w320/vc.png"
+    },
+    "Samoa": {
+      "coordinates": [
+        -13.759,
+        -172.1046
+      ],
+      "flag": "https://flagcdn.com/w320/ws.png"
+    },
+    "San Marino": {
+      "coordinates": [
+        43.9424,
+        12.4578
+      ],
+      "flag": "https://flagcdn.com/w320/sm.png"
+    },
+    "Sao Tome and Principe": {
+      "coordinates": [
+        0.1864,
+        6.6131
+      ],
+      "flag": "https://flagcdn.com/w320/st.png"
+    },
+    "Saudi Arabia": {
+      "coordinates": [
+        23.8859,
+        45.0792
+      ],
+      "flag": "https://flagcdn.com/w320/sa.png"
+    },
+    "Senegal": {
+      "coordinates": [
+        14.4974,
+        -14.4524
+      ],
+      "flag": "https://flagcdn.com/w320/sn.png"
+    },
+    "Serbia": {
+      "coordinates": [
+        44.0165,
+        21.0059
+      ],
+      "flag": "https://flagcdn.com/w320/rs.png"
+    },
+    "Seychelles": {
+      "coordinates": [
+        -4.6796,
+        55.492
+      ],
+      "flag": "https://flagcdn.com/w320/sc.png"
+    },
+    "Sierra Leone": {
+      "coordinates": [
+        8.4606,
+        -11.7799
+      ],
+      "flag": "https://flagcdn.com/w320/sl.png"
+    },
+    "Singapore": {
+      "coordinates": [
+        1.3521,
+        103.8198
+      ],
+      "flag": "https://flagcdn.com/w320/sg.png"
+    },
+    "Slovakia": {
+      "coordinates": [
+        48.669,
+        19.699
+      ],
+      "flag": "https://flagcdn.com/w320/sk.png"
+    },
+    "Slovenia": {
+      "coordinates": [
+        46.1512,
+        14.9955
+      ],
+      "flag": "https://flagcdn.com/w320/si.png"
+    },
+    "Solomon Islands": {
+      "coordinates": [
+        -9.6457,
+        160.1562
+      ],
+      "flag": "https://flagcdn.com/w320/sb.png"
+    },
+    "Somalia": {
+      "coordinates": [
+        5.1521,
+        46.1996
+      ],
+      "flag": "https://flagcdn.com/w320/so.png"
+    },
+    "South Africa": {
+      "coordinates": [
+        -30.5595,
+        22.9375
+      ],
+      "flag": "https://flagcdn.com/w320/za.png"
+    },
+    "South Korea": {
+      "coordinates": [
+        35.9078,
+        127.7669
+      ],
+      "flag": "https://flagcdn.com/w320/kr.png"
+    },
+    "South Sudan": {
+      "coordinates": [
+        6.877,
+        31.307
+      ],
+      "flag": "https://flagcdn.com/w320/ss.png"
+    },
+    "Southern Cyprus": {
+      "coordinates": [
+        35.1264,
+        33.4299
+      ],
+      "flag": "https://flagcdn.com/w320/cy.png"
+    },
+    "Spain": {
+      "coordinates": [
+        40.4637,
+        -3.7492
+      ],
+      "flag": "https://flagcdn.com/w320/es.png"
+    },
+    "Sri Lanka": {
+      "coordinates": [
+        7.8731,
+        80.7718
+      ],
+      "flag": "https://flagcdn.com/w320/lk.png"
+    },
+    "Sudan": {
+      "coordinates": [
+        12.8628,
+        30.2176
+      ],
+      "flag": "https://flagcdn.com/w320/sd.png"
+    },
+    "Suriname": {
+      "coordinates": [
+        3.9193,
+        -56.0278
+      ],
+      "flag": "https://flagcdn.com/w320/sr.png"
+    },
+    "Sweden": {
+      "coordinates": [
+        60.1282,
+        18.6435
+      ],
+      "flag": "https://flagcdn.com/w320/se.png"
+    },
+    "Switzerland": {
+      "coordinates": [
+        46.8182,
+        8.2275
+      ],
+      "flag": "https://flagcdn.com/w320/ch.png"
+    },
+    "Syria": {
+      "coordinates": [
+        34.8021,
+        38.9968
+      ],
+      "flag": "https://flagcdn.com/w320/sy.png"
+    },
+    "Taiwan": {
+      "coordinates": [
+        23.6978,
+        120.9605
+      ],
+      "flag": "https://flagcdn.com/w320/tw.png"
+    },
+    "Tajikistan": {
+      "coordinates": [
+        38.861,
+        71.2761
+      ],
+      "flag": "https://flagcdn.com/w320/tj.png"
+    },
+    "Tanzania": {
+      "coordinates": [
+        -6.369,
+        34.8888
+      ],
+      "flag": "https://flagcdn.com/w320/tz.png"
+    },
+    "Thailand": {
+      "coordinates": [
+        15.87,
+        100.9925
+      ],
+      "flag": "https://flagcdn.com/w320/th.png"
+    },
+    "Timor-Leste": {
+      "coordinates": [
+        -8.8742,
+        125.7275
+      ],
+      "flag": "https://flagcdn.com/w320/tl.png"
+    },
+    "Togo": {
+      "coordinates": [
+        8.6195,
+        0.8248
+      ],
+      "flag": "https://flagcdn.com/w320/tg.png"
+    },
+    "Tonga": {
+      "coordinates": [
+        -21.1789,
+        -175.1982
+      ],
+      "flag": "https://flagcdn.com/w320/to.png"
+    },
+    "Trinidad and Tobago": {
+      "coordinates": [
+        10.6918,
+        -61.2225
+      ],
+      "flag": "https://flagcdn.com/w320/tt.png"
+    },
+    "Tunisia": {
+      "coordinates": [
+        33.8869,
+        9.5375
+      ],
+      "flag": "https://flagcdn.com/w320/tn.png"
+    },
+    "Turkey": {
+      "coordinates": [
+        38.9637,
+        35.2433
+      ],
+      "flag": "https://flagcdn.com/w320/tr.png"
+    },
+    "Turkmenistan": {
+      "coordinates": [
+        38.9697,
+        59.5563
+      ],
+      "flag": "https://flagcdn.com/w320/tm.png"
+    },
+    "Tuvalu": {
+      "coordinates": [
+        -7.1095,
+        177.6493
+      ],
+      "flag": "https://flagcdn.com/w320/tv.png"
+    },
+    "Uganda": {
+      "coordinates": [
+        1.3733,
+        32.2903
+      ],
+      "flag": "https://flagcdn.com/w320/ug.png"
+    },
+    "Ukraine": {
+      "coordinates": [
+        48.3794,
+        31.1656
+      ],
+      "flag": "https://flagcdn.com/w320/ua.png"
+    },
+    "United Arab Emirates": {
+      "coordinates": [
+        23.4241,
+        53.8478
+      ],
+      "flag": "https://flagcdn.com/w320/ae.png"
+    },
+    "United Kingdom": {
+      "coordinates": [
+        55.3781,
+        -3.436
+      ],
+      "flag": "https://flagcdn.com/w320/gb.png"
+    },
+    "United States": {
+      "coordinates": [
+        37.0902,
+        -95.7129
+      ],
+      "flag": "https://flagcdn.com/w320/us.png"
+    },
+    "Uruguay": {
+      "coordinates": [
+        -32.5228,
+        -55.7658
+      ],
+      "flag": "https://flagcdn.com/w320/uy.png"
+    },
+    "Uzbekistan": {
+      "coordinates": [
+        41.3775,
+        64.5853
+      ],
+      "flag": "https://flagcdn.com/w320/uz.png"
+    },
+    "Vanuatu": {
+      "coordinates": [
+        -15.3767,
+        166.9592
+      ],
+      "flag": "https://flagcdn.com/w320/vu.png"
+    },
+    "Vatican City": {
+      "coordinates": [
+        41.9029,
+        12.4534
+      ],
+      "flag": "https://flagcdn.com/w320/va.png"
+    },
+    "Venezuela": {
+      "coordinates": [
+        6.4238,
+        -66.5897
+      ],
+      "flag": "https://flagcdn.com/w320/ve.png"
+    },
+    "Vietnam": {
+      "coordinates": [
+        14.0583,
+        108.2772
+      ],
+      "flag": "https://flagcdn.com/w320/vn.png"
+    },
+    "Yemen": {
+      "coordinates": [
+        15.5527,
+        48.5164
+      ],
+      "flag": "https://flagcdn.com/w320/ye.png"
+    },
+    "Zambia": {
+      "coordinates": [
+        -13.1339,
+        27.8493
+      ],
+      "flag": "https://flagcdn.com/w320/zm.png"
+    },
+    "Zimbabwe": {
+      "coordinates": [
+        -19.0154,
+        29.1549
+      ],
+      "flag": "https://flagcdn.com/w320/zw.png"
+    }
+  }
