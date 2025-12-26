@@ -177,6 +177,10 @@
     font-family: 'Georgia', serif;
 }
 
+[data-page-theme="retro"][data-theme="dark"] .stat-value {
+    color: var(--text-primary);
+}
+
 /* ============================================
    MINIMAL THEME
    ============================================ */
@@ -230,7 +234,7 @@
 
 [data-page-theme="minimal"] .stat-value {
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--text-primary);
 }
 
@@ -384,7 +388,7 @@ h1 {
 .stat-value {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--accent-color);
+    color: var(--text-primary);
     min-width: 80px;
     display: inline-block;
     text-align: center;
