@@ -2,6 +2,12 @@
 // Customize how your reading map looks!
 
 const CONFIG = {
+    // Theme settings
+    theme: {
+        current: 'retro',  // Options: 'retro', 'minimal', 'default'
+        showSwitcher: true  // Show theme switcher button (true/false)
+    },
+    
     // Flag display settings
     flags: {
         showOnHover: true,  // Show country flags when hovering over markers (true/false)

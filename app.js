@@ -8,6 +8,7 @@ let searchQuery = '';
 
 // Initialize the application
 function init() {
+    initPageTheme();
     initMap();
     initDarkMode();
     initStatsBar();
@@ -62,6 +63,53 @@ function updateDarkModeButton(theme) {
     btn.textContent = theme === 'dark' ? '☀️' : '🌙';
     btn.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
 }
+
+// Page Theme (Retro / Minimal / Default)
+function initPageTheme() {
+    const { current, showSwitcher } = CONFIG.theme;
+    
+    // Set initial theme
+    document.documentElement.setAttribute('data-page-theme', current);
+    
+    // Show/hide theme switcher button
+    const themeSwitcherBtn = document.getElementById('theme-switcher');
+    if (themeSwitcherBtn && showSwitcher) {
+        themeSwitcherBtn.style.display = 'block';
+        updateThemeSwitcherButton(current);
+    }
+}
+
+function switchPageTheme() {
+    const themes = ['default', 'retro', 'minimal'];
+    const currentTheme = document.documentElement.getAttribute('data-page-theme') || 'default';
+    const currentIndex = themes.indexOf(currentTheme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    const nextTheme = themes[nextIndex];
+    
+    document.documentElement.setAttribute('data-page-theme', nextTheme);
+    updateThemeSwitcherButton(nextTheme);
+}
+
+function updateThemeSwitcherButton(theme) {
+    const btn = document.getElementById('theme-switcher');
+    if (!btn) return;
+    
+    const themeIcons = {
+        'default': '🎨',
+        'retro': '📜',
+        'minimal': '⚪'
+    };
+    
+    const themeNames = {
+        'default': 'Default',
+        'retro': 'Retro',
+        'minimal': 'Minimal'
+    };
+    
+    btn.textContent = themeIcons[theme] || '🎨';
+    btn.title = `Current: ${themeNames[theme]} (Click to switch)`;
+}
+
 
 // Get book icon based on year
 function getBookIconByYear(year) {
@@ -507,6 +555,12 @@ function getFilteredBooks() {
 function attachEventListeners() {
     // Dark mode toggle
     document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
+    
+    // Theme switcher
+    const themeSwitcherBtn = document.getElementById('theme-switcher');
+    if (themeSwitcherBtn && CONFIG.theme.showSwitcher) {
+        themeSwitcherBtn.addEventListener('click', switchPageTheme);
+    }
     
     // Search box
     const searchBox = document.getElementById('search-box');
