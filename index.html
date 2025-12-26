@@ -55,13 +55,15 @@
         <!-- Main Layout: Filters + Map -->
         <div class="main-layout">
             <!-- Left Sidebar: Year Filters -->
-            <aside class="sidebar-left">
+            <div class="sidebar-wrapper">
                 <div class="sidebar-header">
                     <h3>📅 Years</h3>
                     <button id="clear-years" class="clear-icon" title="Clear all years">❌</button>
                 </div>
-                <div id="year-filters" class="filter-list"></div>
-            </aside>
+                <aside class="sidebar-left">
+                    <div id="year-filters" class="filter-list"></div>
+                </aside>
+            </div>
             
             <!-- Map -->
             <div class="map-container">
@@ -69,13 +71,15 @@
             </div>
             
             <!-- Right Sidebar: Author Filters -->
-            <aside class="sidebar-right">
+            <div class="sidebar-wrapper">
                 <div class="sidebar-header">
                     <h3>✍️ Authors</h3>
                     <button id="clear-authors" class="clear-icon" title="Clear all authors">❌</button>
                 </div>
-                <div id="author-filters" class="filter-list"></div>
-            </aside>
+                <aside class="sidebar-right">
+                    <div id="author-filters" class="filter-list"></div>
+                </aside>
+            </div>
         </div>
         
         <!-- Book List -->
