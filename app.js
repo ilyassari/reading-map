@@ -3,7 +3,7 @@ let map;
 let markers = [];
 let selectedYears = new Set();
 let selectedAuthors = new Set();
-let countryFilter = null;
+let selectedCountries = new Set(); // Changed from countryFilter to Set for multiple selection
 let searchQuery = '';
 
 // Initialize the application
@@ -13,8 +13,7 @@ function init() {
     initDarkMode();
     initStatsBar();
     createFilters();
-    updateStats();
-    renderBooks();
+    applyAllFilters(); // Apply initial filtering (all books visible)
     attachEventListeners();
     initKeyboardShortcuts();
 }
@@ -175,9 +174,10 @@ function updateMarkerIcon(country, allBooks) {
     
     const filteredBooks = getFilteredBooksForCountry(allBooks);
     const bookCount = filteredBooks.length;
+    const markerOpacity = CONFIG.ui.markerOpacity;
     
     if (bookCount === 0) {
-        markerData.marker.setOpacity(0.15);
+        markerData.marker.setOpacity(markerOpacity);
         return;
     }
     
@@ -217,6 +217,12 @@ function updateMarkerIcon(country, allBooks) {
     });
     
     markerData.marker.setIcon(bookIcon);
+    
+    // Re-attach click handler to ensure it works after icon update
+    markerData.marker.off('click');
+    markerData.marker.on('click', function() {
+        handleCountryClick(country);
+    });
 }
 
 // Get filtered books for a country
@@ -251,43 +257,23 @@ function updateAllMarkers() {
 
 // Handle country click
 function handleCountryClick(country) {
-    if (countryFilter === country) {
-        countryFilter = null;
-        resetMarkerHighlight();
+    if (selectedCountries.has(country)) {
+        // Deselect country
+        selectedCountries.delete(country);
     } else {
-        countryFilter = country;
-        highlightCountry(country);
+        // Select country
+        selectedCountries.add(country);
     }
-    renderBooks();
+    
+    // Recreate filters to show all items
+    createYearFilters();
+    createAuthorFilters();
+    
+    // Apply central filtering
+    applyAllFilters();
 }
 
 // Highlight country
-function highlightCountry(country) {
-    markers.forEach(({ marker, country: markerCountry }) => {
-        const element = marker.getElement();
-        if (!element) return;
-        
-        if (markerCountry === country) {
-            element.style.filter = 'drop-shadow(0 0 8px rgba(52, 152, 219, 0.8))';
-            element.style.opacity = '1';
-        } else {
-            element.style.filter = 'none';
-            element.style.opacity = '0.15';
-        }
-    });
-}
-
-// Reset highlight
-function resetMarkerHighlight() {
-    markers.forEach(({ marker }) => {
-        const element = marker.getElement();
-        if (element) {
-            element.style.filter = 'none';
-            element.style.opacity = '1';
-        }
-    });
-}
-
 // Group books by country
 function groupBooksByCountry(books) {
     return books.reduce((acc, book) => {
@@ -308,18 +294,11 @@ function createFilters() {
 function createYearFilters() {
     const container = document.getElementById('year-filters');
     
-    // Get available years based on current filters
-    let availableBooks = BOOKS;
+    // Get ALL years from all books
+    const allYears = [...new Set(BOOKS.map(book => book.year))].sort((a, b) => b - a);
     
-    // Filter by selected authors first
-    if (selectedAuthors.size > 0) {
-        availableBooks = availableBooks.filter(book => selectedAuthors.has(book.author));
-    }
-    
-    // Get years from available books
-    const years = [...new Set(availableBooks.map(book => book.year))].sort((a, b) => b - a);
-    
-    const buttons = years.map(year => {
+    // Create buttons for all years (opacity will be set by applyAllFilters)
+    const buttons = allYears.map(year => {
         const isSelected = selectedYears.has(year);
         return `<button class="filter-btn ${isSelected ? 'active' : ''}" data-year="${year}">${year}</button>`;
     }).join('');
@@ -337,22 +316,17 @@ function createYearFilters() {
 function createAuthorFilters() {
     const container = document.getElementById('author-filters');
     
-    // Get available authors based on current filters
-    let availableBooks = BOOKS;
+    // Get ALL authors from all books
+    const allAuthors = [...new Set(BOOKS.map(book => book.author))].sort();
     
-    // Filter by selected years first
-    if (selectedYears.size > 0) {
-        availableBooks = availableBooks.filter(book => selectedYears.has(book.year));
-    }
-    
-    // Get authors from available books
-    const authors = [...new Set(availableBooks.map(book => book.author))].sort();
-    
-    const buttons = authors.map(author => {
+    // Create buttons for all authors (opacity will be set by applyAllFilters)
+    const buttons = allAuthors.map(author => {
         const isSelected = selectedAuthors.has(author);
-        return `<button class="filter-btn ${isSelected ? 'active' : ''}" data-author="${escapeHtml(author)}" title="${escapeHtml(author)}">
-            ${escapeHtml(author.length > 25 ? author.substring(0, 22) + '...' : author)}
-        </button>`;
+        return `<button class="filter-btn ${isSelected ? 'active' : ''}" 
+                        data-author="${escapeHtml(author)}" 
+                        title="${escapeHtml(author)}">
+                    ${escapeHtml(author.length > 25 ? author.substring(0, 22) + '...' : author)}
+                </button>`;
     }).join('');
     
     container.innerHTML = buttons;
@@ -375,10 +349,11 @@ function toggleYearFilter(year, button) {
         button.classList.add('active');
     }
     
-    createAuthorFilters(); // Refresh authors based on new year selection
-    updateAllMarkers();
-    renderBooks();
-    updateStats();
+    // Recreate author filters to show all
+    createAuthorFilters();
+    
+    // Apply central filtering
+    applyAllFilters();
 }
 
 function toggleAuthorFilter(author, button) {
@@ -390,28 +365,25 @@ function toggleAuthorFilter(author, button) {
         button.classList.add('active');
     }
     
-    createYearFilters(); // Refresh years based on new author selection
-    updateAllMarkers();
-    renderBooks();
-    updateStats();
+    // Recreate year filters to show all
+    createYearFilters();
+    
+    // Apply central filtering
+    applyAllFilters();
 }
 
 function clearYearFilters() {
     selectedYears.clear();
-    createYearFilters(); // Recreate to show all years
-    createAuthorFilters(); // Refresh authors
-    updateAllMarkers();
-    renderBooks();
-    updateStats();
+    createYearFilters();
+    createAuthorFilters();
+    applyAllFilters();
 }
 
 function clearAuthorFilters() {
     selectedAuthors.clear();
-    createAuthorFilters(); // Recreate to show all authors
-    createYearFilters(); // Refresh years
-    updateAllMarkers();
-    renderBooks();
-    updateStats();
+    createAuthorFilters();
+    createYearFilters();
+    applyAllFilters();
 }
 
 // Search functionality
@@ -420,9 +392,7 @@ function handleSearch(query) {
     const clearBtn = document.getElementById('clear-search');
     clearBtn.style.display = searchQuery ? 'block' : 'none';
     
-    updateAllMarkers();
-    renderBooks();
-    updateStats();
+    applyAllFilters();
 }
 
 function clearSearch() {
@@ -463,8 +433,9 @@ function renderBooks() {
     const filteredBooks = getFilteredBooks();
     
     let title = `Books (${filteredBooks.length})`;
-    if (countryFilter) {
-        title = `Books from ${countryFilter} (${filteredBooks.length})`;
+    if (selectedCountries.size > 0) {
+        const countryNames = Array.from(selectedCountries).join(', ');
+        title = `Books from ${countryNames} (${filteredBooks.length})`;
     }
     
     // Empty state
@@ -472,7 +443,7 @@ function renderBooks() {
         bookList.innerHTML = `
             <div class="book-list-header">
                 <h2>${title}</h2>
-                ${countryFilter ? '<button id="clear-country" class="clear-filter">Clear country filter</button>' : ''}
+                ${selectedCountries.size > 0 ? '<button id="clear-countries" class="clear-filter">Clear country filter</button>' : ''}
             </div>
             <div class="empty-state">
                 <div class="empty-icon">📚</div>
@@ -481,6 +452,16 @@ function renderBooks() {
                 <button class="clear-all-btn" onclick="clearAllFilters()">Clear all filters</button>
             </div>
         `;
+        
+        const clearButton = document.getElementById('clear-countries');
+        if (clearButton) {
+            clearButton.addEventListener('click', () => {
+                selectedCountries.clear();
+                createYearFilters();
+                createAuthorFilters();
+                applyAllFilters();
+            });
+        }
         return;
     }
     
@@ -500,17 +481,18 @@ function renderBooks() {
     bookList.innerHTML = `
         <div class="book-list-header">
             <h2>${title}</h2>
-            ${countryFilter ? '<button id="clear-country" class="clear-filter">Clear country filter</button>' : ''}
+            ${selectedCountries.size > 0 ? '<button id="clear-countries" class="clear-filter">Clear country filter</button>' : ''}
         </div>
         <ul>${bookItems}</ul>
     `;
     
-    const clearButton = document.getElementById('clear-country');
+    const clearButton = document.getElementById('clear-countries');
     if (clearButton) {
         clearButton.addEventListener('click', () => {
-            countryFilter = null;
-            resetMarkerHighlight();
-            renderBooks();
+            selectedCountries.clear();
+            createYearFilters();
+            createAuthorFilters();
+            applyAllFilters();
         });
     }
 }
@@ -527,8 +509,8 @@ function getFilteredBooks() {
         filtered = filtered.filter(book => selectedAuthors.has(book.author));
     }
     
-    if (countryFilter) {
-        filtered = filtered.filter(book => book.country === countryFilter);
+    if (selectedCountries.size > 0) {
+        filtered = filtered.filter(book => selectedCountries.has(book.country));
     }
     
     if (searchQuery) {
@@ -540,15 +522,97 @@ function getFilteredBooks() {
     }
     
     // Debug logging
-    if (selectedYears.size > 0 || selectedAuthors.size > 0) {
+    if (selectedYears.size > 0 || selectedAuthors.size > 0 || selectedCountries.size > 0) {
         console.log('Filters:', {
             years: Array.from(selectedYears),
             authors: Array.from(selectedAuthors),
+            countries: Array.from(selectedCountries),
             resultCount: filtered.length
         });
     }
     
     return filtered;
+}
+
+// ============================================
+// CENTRAL FILTERING SYSTEM
+// ============================================
+
+// Apply all filters and update UI
+function applyAllFilters() {
+    // 1. Get filtered books based on ALL current filters
+    const filteredBooks = getFilteredBooks();
+    
+    // 2. Extract relevant items from filtered books
+    const relevantCountries = new Set(filteredBooks.map(b => b.country));
+    const relevantYears = new Set(filteredBooks.map(b => b.year));
+    const relevantAuthors = new Set(filteredBooks.map(b => b.author));
+    
+    // 3. Update marker icons first (this resets opacity to 1)
+    updateAllMarkers();
+    
+    // 4. Then update opacity for all UI elements (including markers)
+    updateYearOpacity(relevantYears);
+    updateAuthorOpacity(relevantAuthors);
+    updateCountryOpacity(relevantCountries);
+    
+    // 5. Update book list and stats
+    renderBooks();
+    updateStats();
+}
+
+// Update year filter opacity
+function updateYearOpacity(relevantYears) {
+    const container = document.getElementById('year-filters');
+    const filterOpacity = CONFIG.ui.filterOpacity;
+    const hasActiveFilters = selectedCountries.size > 0 || selectedAuthors.size > 0 || searchQuery;
+    
+    container.querySelectorAll('.filter-btn').forEach(btn => {
+        const year = parseInt(btn.dataset.year);
+        const isRelevant = relevantYears.has(year);
+        const opacity = (!hasActiveFilters || isRelevant) ? 1 : filterOpacity;
+        btn.style.opacity = String(opacity);
+    });
+}
+
+// Update author filter opacity
+function updateAuthorOpacity(relevantAuthors) {
+    const container = document.getElementById('author-filters');
+    const filterOpacity = CONFIG.ui.filterOpacity;
+    const hasActiveFilters = selectedCountries.size > 0 || selectedYears.size > 0 || searchQuery;
+    
+    container.querySelectorAll('.filter-btn').forEach(btn => {
+        const author = btn.dataset.author;
+        const isRelevant = relevantAuthors.has(author);
+        const opacity = (!hasActiveFilters || isRelevant) ? 1 : filterOpacity;
+        btn.style.opacity = String(opacity);
+    });
+}
+
+// Update country marker opacity
+function updateCountryOpacity(relevantCountries) {
+    const markerOpacity = CONFIG.ui.markerOpacity;
+    const hasActiveFilters = selectedCountries.size > 0 || selectedYears.size > 0 || selectedAuthors.size > 0 || searchQuery;
+    
+    markers.forEach(({ marker, country }) => {
+        const element = marker.getElement();
+        if (!element) return;
+        
+        // If this country is selected, highlight it
+        if (selectedCountries.has(country)) {
+            element.style.opacity = '1';
+            element.style.filter = 'drop-shadow(0 0 8px rgba(52, 152, 219, 0.8))';
+            return;
+        }
+        
+        // Remove highlight filter
+        element.style.filter = 'none';
+        
+        // Set opacity based on relevance
+        const isRelevant = relevantCountries.has(country);
+        const opacity = (!hasActiveFilters || isRelevant) ? 1 : markerOpacity;
+        element.style.opacity = String(opacity);
+    });
 }
 
 // Attach event listeners
@@ -627,10 +691,11 @@ function clearAllFilters() {
         clearAuthorFilters();
     }
     
-    // Clear country
-    if (countryFilter) {
-        countryFilter = null;
-        resetMarkerHighlight();
-        renderBooks();
+    // Clear countries
+    if (selectedCountries.size > 0) {
+        selectedCountries.clear();
+        createYearFilters();
+        createAuthorFilters();
+        applyAllFilters();
     }
 }

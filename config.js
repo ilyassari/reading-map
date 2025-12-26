@@ -31,6 +31,8 @@ const CONFIG = {
     // UI settings
     ui: {
         defaultTheme: 'dark',     // Default color theme: 'light' or 'dark'
-        showStats: true           // Show statistics bar at the top (true/false)
+        showStats: true,          // Show statistics bar at the top (true/false)
+        markerOpacity: 0.15,      // Opacity for inactive map markers (0-1)
+        filterOpacity: 0.4        // Opacity for inactive year/author filters (0-1)
     }
 };
