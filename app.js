@@ -44,7 +44,16 @@ function initMap() {
 
 // Dark Mode
 function initDarkMode() {
-    const savedTheme = localStorage.getItem('theme') || CONFIG.ui.defaultTheme;
+    const darkModeBtn = document.getElementById('dark-mode-toggle');
+    
+    // Show/hide button based on config
+    if (CONFIG.theme.showModeToggle === false) {
+        darkModeBtn.style.display = 'none';
+    } else {
+        darkModeBtn.style.display = 'flex';
+    }
+    
+    const savedTheme = localStorage.getItem('theme') || CONFIG.theme.mode;
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateDarkModeButton(savedTheme);
 }
@@ -65,16 +74,22 @@ function updateDarkModeButton(theme) {
 
 // Page Theme (Retro / Minimal / Default)
 function initPageTheme() {
-    const { current, showSwitcher } = CONFIG.theme;
+    const { default: defaultTheme, showSwitcher } = CONFIG.theme;
     
     // Set initial theme
-    document.documentElement.setAttribute('data-page-theme', current);
+    document.documentElement.setAttribute('data-page-theme', defaultTheme);
     
-    // Show/hide theme switcher button
+    // Show/hide theme switcher button (check both old and new config)
     const themeSwitcherBtn = document.getElementById('theme-switcher');
-    if (themeSwitcherBtn && showSwitcher) {
-        themeSwitcherBtn.style.display = 'block';
-        updateThemeSwitcherButton(current);
+    const shouldShowSwitcher = CONFIG.theme.showSwitcher !== false;
+    
+    if (themeSwitcherBtn) {
+        if (shouldShowSwitcher) {
+            themeSwitcherBtn.style.display = 'flex';
+            updateThemeSwitcherButton(defaultTheme);
+        } else {
+            themeSwitcherBtn.style.display = 'none';
+        }
     }
 }
 
@@ -124,7 +139,7 @@ function getFlagUrl(country) {
 // Determine which icon to show
 function getIconEmoji(filteredBooks) {
     const bookCount = filteredBooks.length;
-    const mode = CONFIG.bookIconMode;
+    const mode = CONFIG.map.markers.bookIconMode;
     
     if (mode === 'always-stack') {
         return '📚';
@@ -174,7 +189,12 @@ function updateMarkerIcon(country, allBooks) {
     
     const filteredBooks = getFilteredBooksForCountry(allBooks);
     const bookCount = filteredBooks.length;
-    const markerOpacity = CONFIG.ui.markerOpacity;
+    
+    // Use flag opacity if replaceBooks is true, otherwise use marker opacity
+    const replaceBooks = CONFIG.map.flags.replaceBooks;
+    const markerOpacity = replaceBooks 
+        ? CONFIG.map.flags.inactiveOpacity 
+        : CONFIG.map.markers.inactiveOpacity;
     
     if (bookCount === 0) {
         markerData.marker.setOpacity(markerOpacity);
@@ -184,14 +204,15 @@ function updateMarkerIcon(country, allBooks) {
     markerData.marker.setOpacity(1);
     
     const flagUrl = getFlagUrl(country);
-    const { showOnHover, replaceBooks } = CONFIG.flags;
-    const { markerSize } = CONFIG.map;
+    const { showOnHover } = CONFIG.map.flags;
+    const { size: markerSize } = CONFIG.map.markers;
+    const { height: flagHeight } = CONFIG.map.flags;
     
     let iconHtml;
     
     if (replaceBooks) {
         iconHtml = flagUrl 
-            ? `<img src="${flagUrl}" class="country-flag-static" alt="${country}" />`
+            ? `<img src="${flagUrl}" class="country-flag-static" alt="${country}" style="height: ${flagHeight}px;" />`
             : `<span class="book-icon">📚</span>`;
     } else {
         const iconEmoji = getIconEmoji(filteredBooks);
@@ -200,7 +221,7 @@ function updateMarkerIcon(country, allBooks) {
             iconHtml = `
                 <div class="book-marker-container">
                     <span class="book-icon">${iconEmoji}</span>
-                    <img src="${flagUrl}" class="country-flag" alt="${country}" />
+                    <img src="${flagUrl}" class="country-flag" alt="${country}" style="height: ${flagHeight}px;" />
                 </div>
             `;
         } else {
@@ -564,7 +585,7 @@ function applyAllFilters() {
 // Update year filter opacity
 function updateYearOpacity(relevantYears) {
     const container = document.getElementById('year-filters');
-    const filterOpacity = CONFIG.ui.filterOpacity;
+    const filterOpacity = CONFIG.ui.filters.inactiveOpacity;
     const hasActiveFilters = selectedCountries.size > 0 || selectedAuthors.size > 0 || searchQuery;
     
     container.querySelectorAll('.filter-btn').forEach(btn => {
@@ -578,7 +599,7 @@ function updateYearOpacity(relevantYears) {
 // Update author filter opacity
 function updateAuthorOpacity(relevantAuthors) {
     const container = document.getElementById('author-filters');
-    const filterOpacity = CONFIG.ui.filterOpacity;
+    const filterOpacity = CONFIG.ui.filters.inactiveOpacity;
     const hasActiveFilters = selectedCountries.size > 0 || selectedYears.size > 0 || searchQuery;
     
     container.querySelectorAll('.filter-btn').forEach(btn => {
@@ -591,7 +612,11 @@ function updateAuthorOpacity(relevantAuthors) {
 
 // Update country marker opacity
 function updateCountryOpacity(relevantCountries) {
-    const markerOpacity = CONFIG.ui.markerOpacity;
+    // Use flag opacity if replaceBooks is true, otherwise use marker opacity
+    const replaceBooks = CONFIG.map.flags.replaceBooks;
+    const markerOpacity = replaceBooks 
+        ? CONFIG.map.flags.inactiveOpacity 
+        : CONFIG.map.markers.inactiveOpacity;
     const hasActiveFilters = selectedCountries.size > 0 || selectedYears.size > 0 || selectedAuthors.size > 0 || searchQuery;
     
     markers.forEach(({ marker, country }) => {

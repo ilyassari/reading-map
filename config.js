@@ -1,38 +1,35 @@
-// Display Configuration
-// Customize how your reading map looks!
-
+// Configuration
 const CONFIG = {
-    // Theme settings
-    theme: {
-        current: 'retro',  // Options: 'retro', 'minimal', 'default'
-        showSwitcher: true  // Show theme switcher button (true/false)
-    },
-    
-    // Flag display settings
-    flags: {
-        showOnHover: true,  // Show country flags when hovering over markers (true/false)
-        replaceBooks: true  // Show flags instead of books permanently (true/false)
-    },
-    
-    // Book icon display modes
-    // Options: 'auto', 'always-stack', 'always-single'
-    // - 'auto': Single book icon for 1 book, stack for multiple (default)
-    // - 'always-stack': Always show stack icon (📚) regardless of count
-    // - 'always-single': Always show single book icon (colored by year)
-    bookIconMode: 'always-stack',
-    
-    // Map settings
-    map: {
-        initialZoom: 2,           // Starting zoom level (1-18)
-        initialCenter: [20, 0],   // Starting position [latitude, longitude]
-        markerSize: 48            // Size of markers in pixels
-    },
-    
-    // UI settings
+    // UI Settings
     ui: {
-        defaultTheme: 'dark',     // Default color theme: 'light' or 'dark'
-        showStats: true,          // Show statistics bar at the top (true/false)
-        markerOpacity: 0.15,      // Opacity for inactive map markers (0-1)
-        filterOpacity: 0.4        // Opacity for inactive year/author filters (0-1)
+        showStats: true,              // Show/hide statistics bar at the top
+        filters: {
+            inactiveOpacity: 0.4      // Opacity for inactive year/author filter buttons (0-1)
+        }
+    },
+    
+    // Theme Settings
+    theme: {
+        default: 'retro',             // Page theme: 'default', 'retro', or 'minimal'
+        showSwitcher: true,           // Show/hide theme switcher button (🎨)
+        mode: 'dark',                 // Color mode: 'light' or 'dark'
+        showModeToggle: true          // Show/hide dark mode toggle button (🌙)
+    },
+    
+    // Map Settings
+    map: {
+        initialCenter: [20, 0],       // Starting map position [latitude, longitude]
+        initialZoom: 2,               // Starting zoom level (1-18)
+        markers: {
+            size: 48,                 // Marker size in pixels
+            bookIconMode: 'auto',     // Book icon display mode: 'auto', 'always-stack', or 'always-single'
+            inactiveOpacity: 0.15     // Opacity for inactive book icon markers (0-1)
+        },
+        flags: {
+            showOnHover: true,        // Show country flags when hovering over markers
+            replaceBooks: true,       // Show flags instead of book icons permanently
+            height: 30,               // Flag height in pixels (width auto from original aspect ratio)
+            inactiveOpacity: 0.15     // Opacity for inactive flag markers when replaceBooks is true (0-1)
+        }
     }
 };

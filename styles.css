@@ -352,12 +352,16 @@ h1 {
     background: var(--bg-secondary);
     border: 2px solid var(--border-color);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 33px;
+    height: 33px;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 2px 4px var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 .dark-mode-btn:hover,
@@ -500,12 +504,24 @@ h1 {
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
     opacity: 0.6;
+    color: var(--text-secondary);
 }
 
 .clear-icon:hover {
     background: var(--bg-primary);
+    opacity: 1;
+    color: var(--text-primary);
+}
+
+/* Dark mode - brighter color */
+[data-theme="dark"] .clear-icon {
+    color: var(--text-primary);
+    opacity: 0.7;
+}
+
+[data-theme="dark"] .clear-icon:hover {
     opacity: 1;
 }
 
@@ -647,8 +663,6 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 30px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -666,8 +680,6 @@ h1 {
 }
 
 .country-flag-static {
-    width: 40px;
-    height: 30px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: block;
@@ -706,11 +718,25 @@ h1 {
 @media (max-width: 968px) {
     .main-layout {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    /* Reorder: Map first, then Years, then Authors */
+    .map-container {
+        order: 1;
+    }
+    
+    .sidebar-wrapper:nth-child(1) {
+        order: 2; /* Years */
+    }
+    
+    .sidebar-wrapper:nth-child(3) {
+        order: 3; /* Authors */
     }
     
     .sidebar-left,
     .sidebar-right {
-        max-height: 300px;
+        max-height: 250px;
     }
     
     .stats-bar {
@@ -735,6 +761,38 @@ h1 {
     .header-content {
         flex-direction: column;
         gap: 10px;
+    }
+    
+    .sidebar-left,
+    .sidebar-right {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    #map {
+        height: 300px;
+    }
+    
+    .stats-bar {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        min-width: calc(50% - 5px);
     }
 }
 
