@@ -34,6 +34,13 @@
       ],
       "flag": "https://flagcdn.com/w320/ao.png"
     },
+    "Antigua and Barbuda": {
+      "coordinates": [
+        17.0608,
+        -61.7964
+      ],
+      "flag": "https://flagcdn.com/w320/ag.png"
+    },
     "Argentina": {
       "coordinates": [
         -38.4161,
@@ -265,6 +272,13 @@
       ],
       "flag": "https://flagcdn.com/w320/cg.png"
     },
+    "Cook Islands": {
+      "coordinates": [
+        -21.2367,
+        -159.7777
+      ],
+      "flag": "https://flagcdn.com/w320/ck.png"
+    },
     "Costa Rica": {
       "coordinates": [
         9.7489,
@@ -292,6 +306,13 @@
         15.473
       ],
       "flag": "https://flagcdn.com/w320/cz.png"
+    },
+    "DR Congo": {
+      "coordinates": [
+        -4.0383,
+        21.7587
+      ],
+      "flag": "https://flagcdn.com/w320/cd.png"
     },
     "Denmark": {
       "coordinates": [
@@ -341,6 +362,13 @@
         -88.8965
       ],
       "flag": "https://flagcdn.com/w320/sv.png"
+    },
+    "England": {
+      "coordinates": [
+        52.3555,
+        -1.1743
+      ],
+      "flag": "https://flagcdn.com/w320/gb-eng.png"
     },
     "Equatorial Guinea": {
       "coordinates": [
@@ -489,6 +517,13 @@
       ],
       "flag": "https://flagcdn.com/w320/hn.png"
     },
+    "Hong Kong": {
+      "coordinates": [
+        22.3193,
+        114.1694
+      ],
+      "flag": "https://flagcdn.com/w320/hk.png"
+    },
     "Hungary": {
       "coordinates": [
         47.1625,
@@ -552,6 +587,13 @@
       ],
       "flag": "https://flagcdn.com/w320/it.png"
     },
+    "Ivory Coast": {
+      "coordinates": [
+        7.54,
+        -5.5471
+      ],
+      "flag": "https://flagcdn.com/w320/ci.png"
+    },
     "Jamaica": {
       "coordinates": [
         18.1096,
@@ -593,6 +635,13 @@
         -168.734
       ],
       "flag": "https://flagcdn.com/w320/ki.png"
+    },
+    "Kosovo": {
+      "coordinates": [
+        42.6026,
+        20.903
+      ],
+      "flag": "https://flagcdn.com/w320/xk.png"
     },
     "Kuwait": {
       "coordinates": [
@@ -670,6 +719,13 @@
         6.1296
       ],
       "flag": "https://flagcdn.com/w320/lu.png"
+    },
+    "Macau": {
+      "coordinates": [
+        22.1987,
+        113.5439
+      ],
+      "flag": "https://flagcdn.com/w320/mo.png"
     },
     "Madagascar": {
       "coordinates": [
@@ -853,6 +909,13 @@
       ],
       "flag": "https://flagcdn.com/w320/ng.png"
     },
+    "Niue": {
+      "coordinates": [
+        -19.0544,
+        -169.8672
+      ],
+      "flag": "https://flagcdn.com/w320/nu.png"
+    },
     "North Korea": {
       "coordinates": [
         40.3399,
@@ -873,6 +936,13 @@
         33.3823
       ],
       "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg/320px-Flag_of_the_Turkish_Republic_of_Northern_Cyprus.svg.png"
+    },
+    "Northern Ireland": {
+      "coordinates": [
+        54.7877,
+        -6.4923
+      ],
+      "flag": "https://flagcdn.com/w320/gb-nir.png"
     },
     "Norway": {
       "coordinates": [
@@ -1035,6 +1105,13 @@
       ],
       "flag": "https://flagcdn.com/w320/sa.png"
     },
+    "Scotland": {
+      "coordinates": [
+        56.4907,
+        -4.2026
+      ],
+      "flag": "https://flagcdn.com/w320/gb-sct.png"
+    },
     "Senegal": {
       "coordinates": [
         14.4974,
@@ -1121,8 +1198,8 @@
     },
     "Southern Cyprus": {
       "coordinates": [
-        35.1264,
-        33.4299
+        34.8064,
+        33.0299
       ],
       "flag": "https://flagcdn.com/w320/cy.png"
     },
@@ -1280,13 +1357,6 @@
       ],
       "flag": "https://flagcdn.com/w320/ae.png"
     },
-    "United Kingdom": {
-      "coordinates": [
-        55.3781,
-        -3.436
-      ],
-      "flag": "https://flagcdn.com/w320/gb.png"
-    },
     "United States": {
       "coordinates": [
         37.0902,
@@ -1335,6 +1405,20 @@
         108.2772
       ],
       "flag": "https://flagcdn.com/w320/vn.png"
+    },
+    "Wales": {
+      "coordinates": [
+        52.1307,
+        -3.7837
+      ],
+      "flag": "https://flagcdn.com/w320/gb-wls.png"
+    },
+    "Western Sahara": {
+      "coordinates": [
+        24.2155,
+        -12.8858
+      ],
+      "flag": "https://flagcdn.com/w320/eh.png"
     },
     "Yemen": {
       "coordinates": [
