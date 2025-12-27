@@ -31,7 +31,9 @@ function initStatsBar() {
 // Initialize Leaflet map
 function initMap() {
     const { initialCenter, initialZoom } = CONFIG.map;
-    map = L.map('map').setView(initialCenter, initialZoom);
+    map = L.map('map', {
+        worldCopyJump: true  // Enable world wrapping
+    }).setView(initialCenter, initialZoom);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -177,8 +179,58 @@ function addMarkersToMap() {
                 handleCountryClick(country);
             });
         
-        markers.push({ marker, country, books });
+        markers.push({ marker, country, books, originalCoords: coords });
         updateMarkerIcon(country, books);
+    });
+    
+    // Update marker positions when map moves to keep them in view
+    map.on('move', updateMarkerPositions);
+    map.on('moveend', updateMarkerPositions);
+}
+
+// Update marker positions to wrap around the world
+function updateMarkerPositions() {
+    const bounds = map.getBounds();
+    const mapCenter = map.getCenter();
+    
+    markers.forEach(({ marker, originalCoords }) => {
+        const [lat, lng] = originalCoords;
+        
+        // Calculate the best longitude to show based on current map center
+        let adjustedLng = lng;
+        const centerLng = mapCenter.lng;
+        
+        // Find the closest wrap of the marker to the current view
+        while (adjustedLng - centerLng > 180) {
+            adjustedLng -= 360;
+        }
+        while (adjustedLng - centerLng < -180) {
+            adjustedLng += 360;
+        }
+        
+        // Update marker position if it changed
+        const currentLatLng = marker.getLatLng();
+        if (Math.abs(currentLatLng.lng - adjustedLng) > 0.01) {
+            const element = marker.getElement();
+            
+            // Disable transitions temporarily for instant teleport
+            if (element) {
+                element.style.transition = 'none';
+                element.style.opacity = '0';
+            }
+            
+            // Update position
+            marker.setLatLng([lat, adjustedLng]);
+            
+            // Force reflow to ensure the transition:none takes effect
+            if (element) {
+                void element.offsetWidth;
+                
+                // Re-enable transitions and make visible
+                element.style.transition = '';
+                element.style.opacity = '';
+            }
+        }
     });
 }
 
