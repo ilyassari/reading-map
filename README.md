@@ -16,7 +16,7 @@ interaktif harita uygulaması.
 
 Kendi kitap haritanızı oluşturmak için:
 
-👉 **[Kurulum Rehberi (SETUP_GUIDE.md)](SETUP_GUIDE.md)**
+👉 **[Kurulum Rehberi (SETUP_GUIDE.md)](SETUP.md)**
 
 - Adım adım kurulum talimatları
 - Teknik bilgi gerektirmez
